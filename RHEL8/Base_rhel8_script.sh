@@ -21,6 +21,7 @@ if [[ -e /run/media/nik/rhelscripts/RHEL8/neofetch-7.1.0/test.txt ]]; then
   sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
   echo "...Enabling the codeready-builder-for-rhel-8-*-rpms repository"
   sudo subscription-manager repos --enable "codeready-builder-for-rhel-8-$(arch)-rpms"
+  sudo yum update libmodulemd -y
   echo ...Installing "make"
   sudo yum install make -y
   echo ...Installing "automake"
