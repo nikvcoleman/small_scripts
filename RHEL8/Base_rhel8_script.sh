@@ -15,6 +15,7 @@ if [[ -e /run/media/nik/rhelscripts/RHEL8/neofetch-7.1.0/test.txt ]]; then
   echo "...Cleaning up neofetch directory."
   sudo rm -r home/nik/neofetch-7.1.0/
   echo 'neofetch' | sudo tee -a /home/nik/.bashrc
+  sudo chmod 777 *.jpg
   echo "...Copying files from usb to Nik's picture dir."
   sudo cp /run/media/nik/rhelscripts/RHEL8/*.jpg /home/nik/Pictures
   echo "...Downloading and installing EPEL8"
